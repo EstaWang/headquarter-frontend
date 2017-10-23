@@ -2,10 +2,109 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 column">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SparkFlow</a>
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <ul class="navbar-nav">
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="FlowDrop" ngbDropdownToggle>Flow</button>
+                <div ngbDropdownMenu aria-labelledby="FlowDrop">
+                  <button class="dropdown-item">New Flow</button>
+                  <button class="dropdown-item">Open Flow</button>
+                  <button class="dropdown-item">Save Flow</button>
+                  <button class="dropdown-item">Download Flow</button>
+                </div>
+              </li>
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="CellDrop" ngbDropdownToggle>Cell</button>
+                <div ngbDropdownMenu aria-labelledby="CellDrop">
+                  <button class="dropdown-item">Run Cell</button>
+                  <button class="dropdown-item">Delete Cell</button>
+                  <button class="dropdown-item">Move Cell Up</button>
+                  <button class="dropdown-item">Move Cell Down</button>
+                  <button class="dropdown-item">Insert Cell Above</button>
+                  <button class="dropdown-item">Insert Cell Below</button>
+                  <button class="dropdown-item">Clear Cell Output</button>
+                </div>
+              </li>
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="DataDrop" ngbDropdownToggle>Data</button>
+                <div ngbDropdownMenu aria-labelledby="DataDrop">
+                  <button class="dropdown-item">Import Files</button>
+                  <button class="dropdown-item">Upload File</button>
+                  <button class="dropdown-item">Split Frame</button>
+                  <button class="dropdown-item">Merge Frame</button>
+                  <button class="dropdown-item">List All Frames</button>
+                </div>
+              </li>
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="ModelDrop" ngbDropdownToggle>Model</button>
+                <div ngbDropdownMenu aria-labelledby="ModelDrop">
+                  <button class="dropdown-item">Aggregator</button>
+                  <button class="dropdown-item">Distributed Random Forest</button>
+                  <button class="dropdown-item">Gradient Boosting Machine</button>
+                  <button class="dropdown-item">Generalized Linear Modeling</button>
+                  <button class="dropdown-item">Generalized Low Rand Modeling</button>
+                  <button class="dropdown-item">K-means</button>
+                  <button class="dropdown-item">Naive Bayes</button>
+                  <button class="dropdown-item">List All Models</button>
+                  <button class="dropdown-item">Import Model</button>
+                  <button class="dropdown-item">Export Model</button>
+                </div>
+              </li>
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="ScoreDrop" ngbDropdownToggle>Score</button>
+                <div ngbDropdownMenu aria-labelledby="ScoreDrop">
+                  <button class="dropdown-item">Predict</button>
+                  <button class="dropdown-item">List All Predictions</button>
+                </div>
+              </li>
+              <li ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="AdminDrop" ngbDropdownToggle>Admin</button>
+                <div ngbDropdownMenu aria-labelledby="AdminDrop">
+                  <button class="dropdown-item">Login</button>
+                  <button class="dropdown-item">Logout</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h4>
+        Flow Name
+      </h4>
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">1</button>
+          <button type="button" class="btn btn-secondary">2</button>
+          <button type="button" class="btn btn-secondary">3</button>
+          <button type="button" class="btn btn-secondary">4</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <button type="button" class="btn btn-secondary">5</button>
+          <button type="button" class="btn btn-secondary">6</button>
+          <button type="button" class="btn btn-secondary">7</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button type="button" class="btn btn-secondary">8</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row areaMargin">
+    <div class="col-md-10">
       <app-work-flow></app-work-flow>
-      <app-import-file></app-import-file>
-      <app-parse-file></app-parse-file>
+    </div>
+    <div class="col-md-2">
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
     </div>
   </div>
 </div>
