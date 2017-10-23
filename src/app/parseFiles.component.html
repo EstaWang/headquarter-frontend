@@ -1,0 +1,77 @@
+<h3>Parse File</h3>
+<h4>Parse Configuration</h4>
+<table class="table">
+  <tbody>
+  <tr>
+    <th scope="row">
+      Source
+    </th>
+    <td>
+      <p>source file path</p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      ID
+    </th>
+    <td>
+      <p>source frame id</p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      Parser
+    </th>
+    <td>
+      <select class="form-control" id="selectedParser">
+        <option>AUTO</option>
+        <option>CSV</option>
+        <option>XLS</option>
+        <option>XLSX</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Column Headers</th>
+    <td>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="columnHeaderOption" id="autoColumn" value="auto">
+          Auto
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="columnHeaderOption" id="firstRowHeader" value="firstRowAsHeader">
+          First row contains column names
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="columnHeaderOption" id="firstRowData" value="firstRowAsData">
+          First row contains data
+        </label>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h4>Edit Column Names And Types</h4>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">column name</th>
+    <th scope="col">type</th>
+    <th scope="col">samples</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let column of columns">
+    <th scope="row">1</th>
+    <td>{{column.name}}</td>
+    <td>{{column.type}}</td>
+    <td>{{column.samples}}</td>
+  </tr>
+  </tbody>
+</table>
